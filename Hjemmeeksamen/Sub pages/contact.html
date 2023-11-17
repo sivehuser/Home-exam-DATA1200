@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <title>Kontakt OsloMet</title>
+        <link rel="stylesheet" href="../CSS-folder/common.css"> <!--benytter felles stil-dokument for alle sidene-->
+    </head>
+    <body>
+       <!--Horisontal toppmeny, felles for alle sidene på nettstedet. Se index.html for kommentarer.--> 
+       <ul class="meny"> 
+        <li> <a href="../index.html">Hjem</a> </li>
+        <li> <a href="accessibility.html">Universell utformning</a></li>
+        <li> <a href="topical.html">Studiemuligheter</a></li>
+        <li> <a href="food_service.html">Spisesteder</a></li>
+        <li> <a href="contact.html">Kontakt oss</a></li>
+   </ul>
+   <!--Her kommer innhold-->
+   <div class="hjem_innhold">
+        <div class="temainnhold">
+            <h1>Trenger du å komme i kontakt med oss?</h1>
+            <img id="foaje" src="../Images/foaje.jpeg" alt="Bilde tatt fra resepsjonen på OsloMet.">
+            <p class="fotograf">Fotografi: Hande A/S</p> <!-- Bildekilde: https://hande.no/oslomet-->
+        </div>
+        <div>
+            <h2>Ta direkte kontakt med fakultetet du søker her:</h2>
+                <h3>Fakultet for helsevitenskap:</h3>
+                    <p>Telefontid: 10:00 - 14:00 <br>Nummer: 67 23 59 75</p>
+                <h3>Fakultet for lærerutdanning og internasjonale studier:</h3>
+                    <p>Telefontid: 10:00 - 14:00 <br>Nummer: 67 23 77 77</p>
+                <h3>Fakultet for samfunnsvitenskap:</h3>
+                    <p>Telefontid: 10:00 - 14:00 <br>Nummer: 67 23 59 74</p>
+                <h3>Fakultet for teknologi, kunst og design:</h3>
+                    <p>Telefontid: 10:00 - 14:00 <br>Nummer: 67 23 59 73</p>
+        </div>
+        <div>
+            <h2>Mer generelle spørsmål?</h2>
+                <h3>Benytt vårt kontaktskjerma, så svarer vi deg innen 5 virkedager:</h3>
+                <form class="kontaktskjema">
+                    <table>
+                        <tr>
+                            <th><label>Student ved OsloMet?</label></th>
+                            <th><input type="radio" name="student" value="Ja">
+                            <label>Ja</label>
+                            <input type="radio" name="student" value="Nei">
+                            <label>Nei</label></th>
+                        </tr>
+                        <tr>
+                            <th><label>Navn:</label></th>
+                            <th><input type="text" name="navn" placeholder="Ola Nordmann"></th>
+                        </tr>
+                        <tr>
+                            <th><label>E-post:</label></th>
+                            <th><input type="email" name="epost" placeholder="ola@example.com"></th>
+                        </tr>
+                        <tr>
+                            <th><label>Din henvendelse:</label></th>
+                            <th><input class="henvendelse" type="text" name="henvendelse" placeholder="Skriv inn din henvendelse"></th>
+                        </tr>
+                        <tr>
+                            <th><input class="knapp" type="reset" name="reset" value="Reset"></th>
+                            <th><input class="knapp" type="submit" name="sendinn" value="Send inn"></th>
+                        </tr>
+                    </table>
+                </form>
+        </div>
+   </div>
+    </body>
+    <!--Bunntekst, felles for alle sidene på nettstedet. Se index.html for kommentarer-->
+    <footer class="bunntekst">
+        <div>
+            <p>OsloMet Storbyuniversitetet,<br>Pilestredet 35, 0166 Oslo</p>
+        </div>
+        <div>
+            <p>
+                Åpningstider for vår resepsjon er:<br>
+                Mandag: 08:30 - 15:00<br>                    
+                Tirsdag: 08:30 - 15:00<br>
+                Onsdag: 08:30 - 15:00<br>
+                Torsdag: 08:30 - 15:00<br>
+                Fredag: 08:30 - 15:00<br>
+                Lørdag: stengt<br>
+                Søndag: stengt<br>
+            </p>
+        </div>
+        <div>
+            <p>Nettstedet er laget av Navn Navnesen,<br> kontaktes på navnesen@oslomet.no</p>
+        </div>
+    </footer>
+</html>

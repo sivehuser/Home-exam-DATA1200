@@ -1,0 +1,143 @@
+/*Utforming av horisontal meny på alle sidene */
+.meny {
+    margin: 0; /*for sømløshet i menyen velges margin og padding til 0*/
+    padding: 0;
+    background-color: #333; /*setter bakgrunnsfarge til menylinjen*/
+    display: flex; /*gir enkelt og elegant design av toppmenyen*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*font som er lett å lese, og tiltalende å se på*/
+}
+ul {
+    list-style-type: none; /*fjerner kulepunktene fra alle lister*/
+}
+.punktliste {
+    list-style-type:disc; /*legger til kulepunkter til disse spesifikke listene*/
+    text-align: left; /*ordner listen til venstre, slik at den blir lettere å lese*/
+}
+li {
+    flex: auto; /*fyller bredden på skjermen*/
+}
+li a {
+    display: block; /*linken fyller hele "knappen"*/
+    color: white; /*tekstfarge hvit*/
+    text-align: center; /*plasserer teksten i midten av ruta*/
+    padding: 14px 16px; /*padding over og under teksten, for finere design*/
+    text-decoration: none; /*helt enkel tekst uten noen former for pynt*/
+}
+li a:hover { /*når musepekeren er over skjer...*/
+    background-color: #111; /*..bytte av bakgrunnsfarge*/
+}
+main { /*main elementene til alle sidene på nettstedet får..*/
+	background-color: rgba(186, 184, 181, 0.275); /*bakgrunnsfarge*/
+}
+p {
+    padding: 2px; /*for å unngå "cramped" tekst inne i tekstfelt*/
+}
+.hjem_innhold { /*alle sidene har definert denne klassen, som organiserer sitt innhold i grid, for enkel redigering av oppsett og tillegging av nye elementer på siden*/
+    display: grid; /*organiserer rutenettet/griden*/
+    grid-template-columns: 1fr, 1fr, 1fr; /*deler siden i 3 like store vertikale deler*/
+    gap: 10px; /*for pent design er det et mellomrom mellom delene*/
+    background-color:rgba(186, 184, 181, 0.275) ; /*bakgrunnsfarge på grid-elementene*/
+    padding: 3%; /*for luftigere design, som blir enklere å lese*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*tiltalende og enkel font*/
+}
+img {
+    width: 70%; /*skalering av bildene, slik at de passer inn i sine respektive elementer*/
+}
+.fotograf {
+    font-size: xx-small; /*opphavretten til bildene oppgis, uten å ha for stort blikkfang med ekstra, ekstra liten font størrelse*/
+    color: rgb(19, 15, 15); /*skriftfarge på denne fonten*/
+}
+/* når skjermen blir mindre enn 768px (mobil-skjerm) endres artiklene slik at det kun er en i bredden*/
+@media only screen and (max-width:768px) { /*for å kunne være lesbar på ulike skjermsøtrrelser, f.eks. PC og mobil må grid-oppsettet endres ved mindre skjerm*/
+    .hjem_innhold { /*innholdet i griden*/
+       display: block; /*endrer til blokk-organisering*/
+    }
+}
+.hjem_innhold > div { /*div-elementer under .hjem-innhold*/
+    background-color: rgba(209, 207, 203, 0.89); /*endret bakgrunnsfarge*/
+    text-align: center; /*tekst plasseres sentralt*/
+    padding: 20px 0; /*padding for å unngå cramped tekst som gjør det vanskelig å lese innholdet*/
+  }
+  .temainnhold {
+    grid-column: 1 / span 3; /*hovedårverskriften på siden bruker hele sidens bredde*/
+  }
+/*animasjon ved hover*/ 
+/*HVORFOR FUNGERER IKKE DETTE, SPØR TA*/
+
+.artikler {
+    width: 100%; /*bekrefter original bredde*/
+    transition: 1s; /*når musepekeren er over .artikler skal "animasjonen" bruke 1 sekund på å ferdigstilles*/
+}
+.artikler:hover { /*når musepekeren er over .artikler, så...*/
+    width: 110%; /*øker elementet i størrelse, både høyde og bredde*/
+    height: 110%;
+}
+/*Bunnteksten til alle sidene*/
+.bunntekst {
+    display: flex; /*organiserer footer-informasjon i flex-boxer*/
+    flex-direction: row; /*disse skal ligge på rad etter hverandre*/
+    margin: 0; /*da skal gå kant i kant med skjermsiden, slik som menyen på toppen av siden*/
+    padding: 0;
+    background-color: #333; /*samme bakgrunnsfarge og font-farge som toppmenyen for sømløst design og rød tråd*/
+    color: white;
+}
+.bunntekst > div { /*alle div-elementer under bunnteksten*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*samme skrifttype som resten av siden*/
+    flex: auto; /*fyller hele bredden til sammen*/
+    padding: 7px 8px; /*padding for mer luft som gjør teksten lettere å lese*/
+    padding-left: 10%; /*gir bedre organisering av innholdet i elementene*/
+}
+
+/* spesifikt for kontakt-siden*/
+#foaje {
+    width: 50%; /*for at bilde inne skal ta for stor plass på nettsiden skaleres det ned*/
+    opacity: 90%; /*for å unngå for sterke farger på bildet*/
+}
+table { /*organiserer kontaktskjemaet i en tabell, slik at oppsettet blir penere*/
+    width: 80%; /*for pent design*/
+    padding-left: 20%; /*gir mer luft til venstresiden, som gjør innholdet lettere å lese*/
+    margin-bottom: 10px; /*slik at det er luft mellom bunnen av tabellen og grid-bunnen*/
+}
+label {
+    font-weight: lighter; /*gjør skrifttypen lettere/ikke fet slik at det er lettere å lese*/
+}
+.knapp { /*submit-knappen og reset-knappen*/
+    background-color: #333; /*samme bakgrunnsfarge som bakgrunnen i toppmeny og bunntekst*/
+    color: rgb(165, 163, 163); /*tekstfarge på knappene*/
+    padding: 8px 15px; /*utforming av knappene, slik at de har luft rundt teksten*/
+    border: none; /*ingen bord rundt knappene*/
+    border-radius: 4px; /*avrunding av hjørnene*/
+    margin-top: 10%; /*luft mellom boksen for henvendelse og knappenes*/
+}
+.henvendelse:focus { /*når leseren tykker på feltet for å skrive sin henvendelse, så...*/
+    width: 300px; /*blir boksen større, slik at leseren kan se mer av hva de skriver*/
+    height: 100px;
+}
+/*spesifikt for topical/studietilbud*/
+#student_bilde {
+    width: 50%; /*bildet skaleres ned for å unngå at det tar for stor plass*/
+    opacity: 80%; /*gjennomsiktigheten økes for at fargene ikke skal blir for sterke på siden*/
+}
+#studietilbud {
+    grid-column: 1 / span 3; /*denne overskriften dekker nå hele siden*/
+    background-color: rgba(235, 233, 230, 0.768); /*ny bakgrunnsfarge bak denne overskriften*/
+}
+.logo {
+    height: 25%; /*skalerer logoene/bildene slik at de tar like stor plass, og utforningen av hver grid blir lik. Bredden er allerede justert med img elementet*/
+}
+
+/*spesifikt for siden om spisesteder*/
+.span2 {
+    grid-column: 1 / span 2; /*elementet tar opp to plasser i bredden*/
+}
+.vspan2 {
+    grid-row: 1 / span 2; /*elementet tar opp to plassen i høyden*/
+}
+
+/*spesifikt for siden om accessibility*/
+.faglig_overskrift { /*ettersom denne siden inneholder faglig innhold som skal være enkelt å lese legges overskriftene til venstre i elementet*/
+    text-align: left;
+    padding-left: 7px; /*for å unngå at overskriften ligger helt inntil kanten på elementet*/
+}
+
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <title>OsloMet Campus</title>
+        <link rel="stylesheet" href="CSS-folder/common.css">
+    </head>
+    <body>
+       <!--Horisontal toppmeny, denne er felles for alle sidene på nettstedet--> 
+       <ul class="meny"> <!--definerer klasse, i tilfelle ul skal bruker på andre måter enn som toppmeny-->
+            <li> <a href="index.html">Hjem</a> </li> <!--knappen lengst til venstre leder til index-siden-->
+            <li> <a href="Sub pages/accessibility.html">Universell utformning</a></li> <!--neste knapp leder til testen for universell utforming av nettstedene-->
+            <li> <a href="Sub pages/topical.html">Studiemuligheter</a></li> <!--knapp nummer tre leder til siden for å bli kjent på campus og studieoversikt-->
+            <li> <a href="Sub pages/food_service.html">Spisesteder</a></li> <!--nest siste knapp leder til siden med informasjon om spisesteder på campus-->
+            <li> <a href="Sub pages/contact.html">Kontakt oss</a></li> <!--siden kontaktskjemaet og annen kontaktinformasjon finnes ved siste knapp-->
+       </ul>
+       <!--Innhold på hjemmesiden-->
+       <div class="hjem_innhold"> <!--siden skal organiseres i gris. Definerer derfor en klassen som skal organiseres i grid-->
+            <div class="temainnhold"> <!--den første grid-boksen skal oppta mer horisontal plass enn de andre, og får derfor egen klasse-->
+                <h1>Velkommen til OsloMet!</h1> <!--finnes inne i den første griden-->
+                    <h2>Studieåret 2023/2024 er igang. Her finner du alt du trenger å vite.</h2> <!--inne i den første griden-->
+                    <img src="Images/forside.jpeg" alt="Bilde av hovedinngangen på OsloMet"> <!--inne i den første griden-->
+                    <p class="fotograf">Fotograf: Benjamin A. Ward/OsloMet, 2023</p> <!--Bildekilde: https://www.oslomet.no/om/nyheter/naa-kan-du-ta-arsstudium-i-informasjonsteknologi  --> <!--inne i den første griden-->
+                        <p> <!--ingresstekst for å vise til nettsidens, og nettstedets tema-->
+                            OsloMet er storbyuniversitetet i Norge, med studiesteder sentralt i Oslo 
+                            og på Kjeller i Lillestrøm. Universitetet er statlig drevet og tilbyr
+                            en rekke utdannelser innen helse, pedagogikk, økonomi, teknologi, kunst 
+                            og design. Uavhengig av hva du interesserer deg for, kan vi garantere at 
+                            vi tilbyr et studium som passer for nettopp <em>deg</em>!
+                        </p>
+            </div>
+            <!--div-elementene blir sine egne grid-bokser på siden. Disse skal være like store og få animasjon, og får derfor tildelt samme klasse-->
+            <div class="artikler">
+                <a href="Sub pages/accessibility.html"><img src="Images/contacttest.png" alt="Utklipp av utformingstest"></a> <!--bildet fungerer som link-->
+                <p class="fotograf">Fotografi: Skjermdump av Sive Huser, 2023</p> <!--oppahvet til vedlagt bilde-->
+                <h4>Våre nettsteder er universelt utformet!</h4>
+                <p>Klikk er på bildet for å lese mer om våre universelt utformede nettsider.</p>
+            </div>
+            <div class="artikler">
+                <a href="Sub pages/food_service.html"><img src="Images/olafspiseri.png" alt="Bilde av kantina"></a> <!--bildet fungerer som link og leder til siden med oversikt over spisesteder-->
+                <p class="fotograf">Fotografi: Skjermdump fra SiO.no, 2023</p> <!--oppahvet til vedlagt bilde--> <!--Bildekilde: https://www.sio.no/mat-og-drikke/spisesteder/Olaf%20spiseri -->
+                <h4>Campus OsloMet tilbyr flere spisesteder.</h4>
+                <p>Klikk på bildet for å lese mer om våre spisesteder.</p>
+            </div>
+            <div class="artikler">
+                <a href="Sub pages/topical.html"><img src="Images/studieretning.png" alt="Bilde av nettsted for studier på OsloMet"></a> <!--bildet fungerer som link og leder til siden for kart og studieprogram-informasjon-->
+                <p class="fotograf">Fotografi: Skjermdump av OsloMets studieretninger, 2023</p> <!--oppahvet til vedlagt bilde--> <!--Bildet er hentet fra: https://www.oslomet.no/studier/studieoversikt -->
+                <h4>Vi tilbyr 366 ulike studieretninger.</h4> <!--Kilde: https://www.oslomet.no/studier/studieoversikt -->
+                <p>Klikk på bildet for å lese mer om vårt studietilbud.</p>
+            </div>
+            <div class="artikler">
+                <a href="Sub pages/contact.html"><img src="Images/contact_image.png" alt="Bilde av resepsjonen" id="contact_img"></a> <!--bildet fungerer som link og leder til kontaktinformasjon og kontaktskjema-->
+                <p class="fotograf">Fotografi: Skejrmdump fra kontaktskjemaet, 2023</p> <!--opphavet til vedlagt bilde-->
+                <h4>Kontakt oss</h4>
+                <p>Klikk på bildet for å komme til vårt kontaktskjema og lese mer om våre kontaktpunkter.</p>
+            </div>
+            <div class="artikler">
+                <a href="https://use.mazemap.com/#v=1&zlevel=1&center=10.733352,59.921070&zoom=17.7&campusid=53" target="_blank" ><img src="Images/map.png" alt="Bilde av kartet over campus"></a> <!--bildet fungerer som link og leder til en ekstern side med kart, som åpnes i nytt vindu-->
+                <p class="fotograf">Fotografi: Skjermdump av OsloMets campus, 2023</p><!--opphavet til vedlagt bilde--> <!--Bildekilde: https://ansatt.oslomet.no/sykkelparkering-vask-mekk-bysykkel-->
+                <h4>Finn frem på campus</h4>
+                <p>OsloMet består av flere bygninger på ulike adresser. Det kan være vanskelig å finne frem blant alle bygninger og rom. Vi samarbeider derfor med MazeMap, som kan benyttes til å finne fremt til rett sted. Klikk på bildet for å komme til MazeMap.</p>
+            </div>
+            <div class="artikler">
+                <img src="Images/studentforeninger.jpeg" alt="Bilde av glade studenter"> <!--bildet fungerer ikke (!) som link-->
+                <p class="fotograf">Fotograf: Benjamin A. Ward/OsloMet</p> <!--opphavet til vedlagt bilde--><!--Bildekilde: https://student.oslomet.no/en/siste-nytt/-/nyhet/fa-med-deg-det-som-skjer-pa-campus-->
+                <h4>Studentforeninger</h4>
+                <p>Vi har studentforeninger for enhver smak! OsloMet har egne studentforeninger, men SiO har også en rekke foreninger sammen med de andre universitetene og høyskolene i Oslo. Sjekk <a href="https://www.sio.no" target="_blank">SiO.no</a> for mer informasjon.</p> <!--link til den eksterne nettsiden er heller plassert i teksten, og åpnet nytt vindu ved klikk-->
+            </div>
+        </div>
+    </body>
+    <!--Bunntekst, denne er felles for alle sidene på nettstedet-->
+    <footer class="bunntekst"> <!--ettersom det kun finnes en footer er det strengt talt ikke nødvendig å gi denne en klasse-->
+        <div> <!--hvert element i bunnteksten/footer er et div element, som styles med css-->
+            <p>OsloMet Storbyuniversitetet,<br>Pilestredet 35, 0166 Oslo</p> <!--universitetets adresse er oppført med intuitivt linjeskift-->
+        </div>
+        <div>
+            <p> <!--resepsjonens åpningstider oppføres med intuitive linjeskift-->
+                Åpningstider for vår resepsjon er:<br>
+                Mandag: 08:30 - 15:00<br>
+                Tirsdag: 08:30 - 15:00<br>
+                Onsdag: 08:30 - 15:00<br>
+                Torsdag: 08:30 - 15:00<br>
+                Fredag: 08:30 - 15:00<br>
+                Lørdag: stengt<br>
+                Søndag: stengt<br>
+            </p>
+        </div>
+        <div>
+            <p>Nettstedet er laget av Navn Navnesen,<br> kontaktes på navnesen@oslomet.no</p> 
+        </div>
+    </footer>
+</html>
